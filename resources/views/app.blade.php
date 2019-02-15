@@ -13,8 +13,14 @@
 
     </head>
     <body>
+        <h1>Test de développement</h1>
         <div class="container">
-            {{$value}}
+            {{csrf_field()}}
+            <span id="value"></span>
+            <button onClick="incrementValue()">Incrémenter l'élément</button>
         </div>
+
+        <!-- JavaScripts -->
+        <script src="{{URL::asset('js/value.js')}}"></script>
     </body>
 </html>

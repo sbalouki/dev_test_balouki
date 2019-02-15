@@ -11,6 +11,7 @@
 |
 */
 
-Route::resource('/', 'ValueController', ['only' => [
-    'show', 'update'
-]]);
+Route::get('/value', 'ValueController@show');
+Route::post('/value', 'ValueController@edit');
+
+Route::view('/', 'app');

@@ -12,4 +12,11 @@ class Value extends Model
      * @var array
      */
     protected $fillable = ['value'];
+
+    /**
+     * Disable the timestamps
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 }
