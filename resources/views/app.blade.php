@@ -9,7 +9,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{URL::asset('css/value.css')}}">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -18,10 +17,12 @@
 
     </head>
     <body>
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Idéal Groupe - Test de développement</span>
+        </nav>
         <div class="container">
-            <h1>Test de développement</h1>
             <div>
-                <h2>Valeur en incrément : <span class="badge badge-secondary"><span id="value"></span></span></h2>
+                <h1>Valeur à incrémenter : <span class="badge badge-secondary"><span id="value"></span></span></h1>
             </div>
             <button type="button" class="btn btn-primary btn-lg" onClick="incrementValue()">Incrémenter l'élément</button>
         </div>
