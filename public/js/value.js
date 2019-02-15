@@ -1,4 +1,4 @@
-function changeValue(value)
+function setValue(value)
 {
     var valueHtml = document.getElementById('value');
     valueHtml.innerHTML = value;
@@ -15,7 +15,7 @@ fetch('/value')
 
       // Examine the text in the response
       response.json().then(function(data) {
-          changeValue(data.value);
+          setValue(data.value);
       });
     }
   )
@@ -37,6 +37,6 @@ fetch('/value')
       }
       fetch("/value", params)
             .then((data) => {return data.json()})
-            .then((data) => changeValue(data.value))
+            .then((data) => setValue(data.value))
   }
   
