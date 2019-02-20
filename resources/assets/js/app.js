@@ -21,4 +21,22 @@
 //     el: '#app'
 // });
 
+var serviceValue = require ('./service.js')
 
+var valueHtml = document.getElementById('value');
+
+
+// Execute on load
+serviceValue.getValue ().then((data) => {
+        setValue(data.value);
+})
+
+function setValue (value) {
+    valueHtml.innerHTML = value;
+}
+
+window.incrementsValue = function() {
+    serviceValue.postIncrementsValue().then((data) => {
+        setValue(data.value);
+    });
+}

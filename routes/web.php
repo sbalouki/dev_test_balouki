@@ -11,7 +11,7 @@
 |
 */
 
+Route::view('/', 'app');
+
 Route::get('/value', 'ValueController@show');
 Route::post('/value', 'ValueController@edit');
-
-Route::view('/', 'app');
